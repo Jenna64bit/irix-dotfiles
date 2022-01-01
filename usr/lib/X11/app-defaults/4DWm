@@ -154,6 +154,7 @@
 	*clock.clientDecoration:	border
 ! Custom app border modifications
 	*xclock.clientDecoration:	border
+	*Overview.clientDecoration:		border
 
 	*mailbox.clientDecoration:	border
 	*mailbox.clientFunctions:	-resize -maximize
@@ -164,6 +165,7 @@
 
 !customize iconbox
 	*iconBoxSBDisplayPolicy:	vertical
+	*iconbox.clientDecoration:	border
 
 #
 # App-default for application: 4Dwm.
