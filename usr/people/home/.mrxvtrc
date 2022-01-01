@@ -1,0 +1,115 @@
+Mrxvt.backspaceKey:             ^H
+Mrxvt.command:			/usr/people/jenna/bin/local_sgug_shell.sh
+Mrxvt.cmdAllTabs:		True
+
+
+#
+# ----------------------------- TAB-BAR OPTIONS ------------------------------ #
+#
+Mrxvt.bottomTabbar:             False
+Mrxvt.autohideTabbar:           True
+Mrxvt.minVisibleTabs:           8
+Mrxvt.hideButtons:              True
+Mrxvt.syncTabTitle:             False
+Mrxvt.titleFormat:              %n. %t
+Mrxvt.tabTitle:            	mrxvt rse
+Mrxvt.highlightTabOnBell:       True
+Mrxvt.itabBackground:           #002b36
+Mrxvt.tabBackground:            #002b36
+Mrxvt.itabForeground:           #839496
+Mrxvt.tabForeground:            #839496
+
+#
+# ---------------------- SCROLLING / SCROLLBAR OPTIONS ----------------------- #
+#
+
+Mrxvt.scrollBar:                true
+Mrxvt.scrollbarRight:           true
+Mrxvt.scrollbarStyle:           sgi
+Mrxvt.saveLines:                50000
+Mrxvt.scrollTtyOutputInhibit:   true
+Mrxvt.scrollTtyKeypress:        true
+
+# ---------------------------------- FONTS ----------------------------------- #
+#
+
+Mrxvt.xft:                      0
+Mrxvt.xftSize:                  8
+Mrxvt.xftAntialias:             1
+Mrxvt.xftNomFont:               1
+Mrxvt.xftPSize:                 7
+
+#
+# ---------------------------------- CURSOR ---------------------------------- #
+#
+Mrxvt.cursorBlink:              true
+Mrxvt.cursorColor:              #00ff00
+Mrxvt.cursorColor2:             #000000
+
+#
+# ---------------------------------- COLORS ---------------------------------- #
+#
+
+# Solarized
+Mrxvt.background: #002b36
+Mrxvt.foreground: #839496
+
+## black dark/light
+Mrxvt.color0: #073642
+Mrxvt.color8: #002b36
+
+## red dark/light
+Mrxvt.color1: #dc322f
+Mrxvt.color9: #cb4b16
+
+## green dark/light
+Mrxvt.color2: #859900
+Mrxvt.color10: #586e75
+
+## yellow dark/light
+Mrxvt.color3: #b58900
+Mrxvt.color11: #657b83
+
+## blue dark/light
+Mrxvt.color4: #268bd2
+Mrxvt.color12: #839496
+
+## magenta dark/light
+Mrxvt.color5: #d33682
+Mrxvt.color13: #6c71c4
+
+## cyan dark/light
+Mrxvt.color6: #2aa198
+Mrxvt.color14: #93a1a1
+
+## white dark/light
+Mrxvt.color7: #eee8d5
+Mrxvt.color15: #fdf6e3
+
+
+#
+# ------------------------------- MISC OPTIONS ------------------------------- #
+#
+
+Mrxvt.internalBorder:           2
+Mrxvt.cutChars:                 :=/~#@?%&_-.0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ0abcdefghijklmnopqrstuvwxyz
+Mrxvt.pointerBlank:             True
+Mrxvt.pointerBlankDelay:        10
+Mrxvt.protectSecondary:         True
+
+#
+#                               CLASS SETTINGS
+#
+
+#
+# ------------------------------- FULL SCREEN -------------------------------- #
+#
+
+FullScreen.bottomTabbar:        False
+FullScreen.xftSize:             17
+FullScreen.xftPSize:            12
+
+FullScreen.minVisibleTabs:      15
+FullScreen.smoothResize:        True
+FullScreen.fullscreen:          True
+

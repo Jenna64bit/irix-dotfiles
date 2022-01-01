@@ -1,0 +1,46 @@
+! For comments use "!"
+
+Xft.dpi: 96
+
+! *foreground: white
+! *background: #161616
+
+
+! gray/white
+*color0:  #404040
+*color8:  #808080
+*color7:  #F5F5F5
+*color15: #FFFFFF
+! red
+*color1:  #FF5252
+*color9:  #FF8A80
+! green
+*color2:  #04EB00
+*color10: #20B684
+! orange
+*color3:  #FFDE03
+*color11: #FFFF5B
+! blue
+*color4:  #0088FF
+*color12: #70BCFF
+! magenta
+*color5:  #D831B0
+*color13: #FF71E8
+! cyan
+*color6:  #008899
+*color14: #33BBFF
+
+
+URxvt.transparent: true
+URxvt.shading: 50
+
+URxvt.perl-ext-common:		autocomplete-ALL-the-things
+URxvt.keysym.Control-Tab:	perl:aAtt:word-complete
+URxvt.keysym.Control-question:	perl:aAtt:fuzzy-complete
+URxvt.keysym.Control-quotedbl:	perl:aAtt:undo
+
+*.font: -b&h-lucida-medium-r-*
+
+xterm*faceName: screen
+xterm_faceSize: 14
+xterm*geometry: 120x40

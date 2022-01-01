@@ -1,0 +1,294 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!                                                                              !
+!                 Motif default system-wide configuration file                 !
+!                                                                              !
+!                 app-defaults RESOURCE SPECIFICATIONS FOR 4Dwm                !
+!                                                                              !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!                                                                              !
+!               4Dwm; SGI Motif Window Manager Application Defaults            !
+!                                                                              !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!! 4Dwm is SGI's enhanced version of the Motif window manager, mwm.  As such,
+!! 4Dwm responds to all of the resources defined for mwm.  To affect 4Dwm
+!! presentation, use the resource names you are familiar with for mwm, preceded
+!! by the Class Name 4DWm, or the instance name 4Dwm.
+!!
+!! Note that 4Dwm also defines some additional resources, beyond those found
+!! in mwm, to manage presentation of some of the 4Dwm enhancements.
+!!
+
+! 4Dwm Component Appearance Resources
+!
+!    General Colors
+!	*client*background:		sgilightgray
+	*background:			sgilightgray
+!	*foreground:			black
+	*menu*foreground:		black
+!
+!    Active Component Colors
+	*activeBackground:		sgibrightgray
+!
+!    Fonts
+	*menu*fontList:			-adobe-helvetica-bold-o-normal--14-*
+	*client*fontList:		-adobe-helvetica-bold-o-normal--14-*
+	*feedback*fontList:		-adobe-helvetica-bold-r-normal--14-*
+	*icon*fontList:			-adobe-helvetica-medium-r-normal--14-*
+
+! Trusted 4Dwm Resource
+! Following resource only applies to the trusted version of the window manager
+!
+        *trustedPathManager*fontList:   -adobe-helvetica-medium-r-normal--12-*
+
+! 4Dwm Specific Appearance and Behavior Resources
+!
+	*buttonBindings:		4DwmButtonBindings
+	*frameBorderWidth:		7
+	*freezeOnConfig:		false
+	*iconClick:			false
+	*iconDecoration:		label image
+	*iconImageMaximum:		96x96
+	*iconPlacement: 		left top tight
+	*iconPlacementMargin:       	10
+	*keyBindings:			4DwmKeyBindings
+	*keyboardFocusPolicy:		pointer
+	*limitResize:			true
+	*lowerOnIconify:		false
+	*moveThreshold:			3
+	*multiScreen:			true
+	*passButtons:			true
+	*positionIsFrame:           	false
+	*positionOnScreen:          	true
+	*resizeBorderWidth:		7
+	*showFeedback:			behavior restart quit
+	*transientFunctions:		all -minimize -quit
+
+! 4Dwm Client Specific Resources
+!
+	*windowMenu:			4DwmWindowMenu
+
+! The following is just for documentation -- it isn't described in
+! the mwm manual page.
+!	*moveOpaque:                 	true
+
+! The following are unique to 4Dwm; they have no effect if used with mwm
+	*SG_titleLeft:			true
+	*SG_outlineDecoration:		true
+	*pointerColor:			red
+
+	*SG_framesInOverlays:		true
+	*SG_useOverlay:			true
+	*SG_useOverlaySolid:		true
+	*SG_visualType:      		popup
+
+!	also see iconPlacement and iconPlacementMargin (above)
+	*SG_iconImageColors:		0
+!	*SG_iconPlacementLeftMargin:    125
+	*SG_iconAutoPlaceUnique:	true
+	*SG_manageSession:		true
+	*SG_autoSave:			true
+	*SG_wMenuButtonClick2Quit:	true
+
+! The following are for localization -- strings used in 4Dwm's dialogs, etc.
+	*confirmQuit*messageString:	Quit 4Dwm?
+	*confirmQuit*cancelLabelString:	Cancel
+	*confirmQuit*okLabelString:	OK
+
+	*confirmRestart*messageString:		Restart 4Dwm?
+	*confirmRestart*cancelLabelString:	Cancel
+	*confirmRestart*okLabelString:		OK
+
+	*behavior*toggleBehavior*labelString:      Toggle Behavior?
+	*behavior*cancelLabelString:		   Cancel
+	*behavior*okLabelString:		   OK
+	*behavior*User_Customization*labelString:  User Customization
+	*behavior*OSF_Motif_Defaults*labelString:  OSF/Motif Defaults
+	*behavior*IRIS_Defaults*labelString:  	   IRIS Defaults
+
+!	If you change SG_initialDeskName, you may want to also change 
+!	the corresponding ov (Overview) resource - newDeskString.
+	*SG_initialDeskName:		Desk 1
+	*iconBoxTitle: 			Windows Overview
+!	Careful with SG_packIconsMenuItem.  The format is very important.
+	*SG_packIconsMenuItem: \"Pack Icons\" _P Shift Alt<Key>F7 f.pack_icons\n
+
+! Appearance and behavior for new usr environment
+	*arrowsType:			XmNO_THUMB_WHEN_EMPTY
+	*sgiMode:			True
+	*schemeFileList:		ImdSpec, 4DWmSpec
+	*paletteFileList:		ImdPalette
+	*useSchemes:			all
+	*dragReceiverProtocolStyle: 	DRAG_NONE
+
+
+! background resources
+
+!	note when localizing.  The word Global below must be changed to match
+!	the *globalDeskName resource in the Overview.  
+	*Global*backgroundDescription: -solid sgiLightBlue
+
+!	 the following default description describes the initial bitmap for the
+!	 first desk created.  The actual colors are not important; when the
+!	 desk is created, suitable colors will be chosen from the scheme files
+	*defaultBackgroundDescription: -bitmap /usr/include/X11/bitmaps/granite -bg black -fg white
+
+!	 background message strings
+	*xsetrootAndBackgroundWindowXconfirm: xconfirm -t 'WARNING: backgrounds which are not set through the background control panel' -t 'are ignored if icons are on the background' -icon warning -header 'Background' > /dev/null
+	*xsetrootAndDesksXconfirm: xconfirm -t 'WARNING: backgrounds which are not set through the background control panel' -t 'will not be remembered across desk changes' -icon warning -header 'Background' > /dev/null
+
+
+! SGI's default user environment cares about the appearance of these apps
+	*iconbox*clientFunctions:    	-minimize
+
+!	*toolchest.clientDecoration: 	title -border
+	*toolchest.clientDecoration: 	border
+	*toolchest.clientFunctions:  	-resize -minimize -maximize
+!	*ToolChest.clientDecoration: 	title -border
+	*ToolChest.clientDecoration: 	border
+	*ToolChest.clientFunctions:  	-resize -minimize -maximize
+
+	*clock.clientDecoration:	border
+! Custom app border modifications
+	*xclock.clientDecoration:	border
+
+	*mailbox.clientDecoration:	border
+	*mailbox.clientFunctions:	-resize -maximize
+
+!     Don't decorate arbitrary-shaped client windows
+	*oclock.clientDecoration:	none
+	*xeyes.clientDecoration:	none
+
+!customize iconbox
+	*iconBoxSBDisplayPolicy:	vertical
+
+#
+# App-default for application: 4Dwm.
+# Automatically generated when the product is built
+#
+	*intl._SGI_MMX_mwm_nogrmem:	Insufficient memory for graphics data
+	*intl._SGI_MMX_mwm_divideby0:	Fatal Error: Divide by 0 in SetMwmIconInfo\n
+	*intl._SGI_MMX_mwm_iconmisfit:	Could not make icon to go in icon box
+	*intl._SGI_MMX_mwm_noiconmem:	Insufficient memory for icon creation
+	*intl._SGI_MMX_mwm_noclientwindowmem:	Insufficient memory for client window framing
+	*intl._SGI_MMX_mwm_readerr_title:	Error reading Title Elements\n
+	*intl._SGI_MMX_mwm_noiconputmem:	Insufficient memory for icon placement
+	*intl._SGI_MMX_mwm_nomem_icondata:	Insufficient memory to create icon box data
+	*intl._SGI_MMX_mwm_nomem_windata:	Insufficient memory for window management data
+	*intl._SGI_MMX_mwm_nomem_winflags:	Insufficient memory for window manager flags
+	*intl._SGI_MMX_mwm_nomem_atom:	Insufficient memory to XInternAtom _MOTIF_WM_QUERY_nn
+	*intl._SGI_MMX_mwm_ownfailed:	Failed to own _MOTIF_WM_QUERY_nn selection
+	*intl._SGI_MMX_mwm_nomem_winmgrdata:	Insufficient memory for window manager data
+	*intl._SGI_MMX_mwm_listsel:	Lost _MOTIF_WM_QUERY_nn selection
+	*intl._SGI_MMX_mwm_nomem_cvtsel:	Insufficient memory to convert _MOTIF_WM_QUERY_nn selection
+	*intl._SGI_MMX_mwm_cant_restartwm:	Cannot restart the window manager
+	*intl._SGI_MMX_mwm_cantwrap:	Unable to warp to unmanaged screen %d\n
+	*intl._SGI_MMX_mwm_bad_iconbmp:	Invalid icon bitmap
+	*intl._SGI_MMX_mwm_bad_rooticonbmp:	Invalid root for icon bitmap
+	*intl._SGI_MMX_mwm_cip_notsup:	Warning color icon pixmap not supported
+	*intl._SGI_MMX_mwm_nomem_bevel:	Insufficient memory to bevel icon image
+	*intl._SGI_MMX_mwm_nomem_bmp:	Insufficient memory for bitmap %s\n
+	*intl._SGI_MMX_mwm_bad_bmp:	Unable to read bitmap file %s\n
+	*intl._SGI_MMX_mwm_bad_bmpim:	Unable to use bitmap/image file %s\n
+	*intl._SGI_MMX_mwm_invalid_bmp:	Invalid bitmap file %s\n
+	*intl._SGI_MMX_mwm_nomem_scrdata:	Insufficient memory for Screen data
+	*intl._SGI_MMX_mwm_twowm:	Another window manager is running on screen %d
+	*intl._SGI_MMX_mwm_toomany_scr:	Unable to manage any screens on display.
+	*intl._SGI_MMX_mwm_bad_X:	Cannot configure X connection
+	*intl._SGI_MMX_mwm_nomem_wkspdata:	Insufficient memory for Workspace data
+	*intl._SGI_MMX_mwm_nomem_dpystr:	Insufficient memory for displayString
+	*intl._SGI_MMX_mwm_few_scrnames:	Insufficient memory for screen names
+	*intl._SGI_MMX_mwm_nomenu:	Menu specification %s not found\n
+	*intl._SGI_MMX_mwm_nomem_menu:	Insufficient memory for menu %s\n
+	*intl._SGI_MMX_mwm_menu_recursion:	Menu recursion detected for %s\n
+	*intl._SGI_MMX_mwm_nomem_cdata:	Insufficient memory for client data
+	*intl._SGI_MMX_mwm_locale_msg:	[XmbTextPropertyToTextList]:\n     Locale (%.100s) not supported. (Check $LANG).
+	*intl._SGI_MMX_mwm_no_iconbox:	Couldn`t make icon box
+	*intl._SGI_MMX_mwm_badcvt:	4Dwm cannot convert property %.100s as clientTitle/iconTitle: XmbTextPropertyToTextList.
+	*intl._SGI_MMX_mwm_nomem_cvt:	insufficient memory to convert property %.100s as clientTitle/iconTitle: XmbTextPropertyToTextList.
+	*intl._SGI_MMX_mwm_unknown_prop:	4Dwm receives unknown property as clientTitle/iconName %.100s property ignored.
+	*intl._SGI_MMX_mwm_retry:	Retrying - using builtin window menu\n
+	*intl._SGI_MMX_mwm_cantopen:	%s: can't open %s.\n
+	*intl._SGI_MMX_mwm_rmsg:	Received %s message:  %s\n
+	*intl._SGI_MMX_mwm_visual_mismatch:	matching visual NOT found\n
+	*intl._SGI_MMX_mwm_SGwarn:	%s (%s): %s\n
+	*intl._SGI_MMX_mwm_xerr_msg1:	XError
+	*intl._SGI_MMX_mwm_xerr_defstr1:	X Error
+	*intl._SGI_MMX_mwm_xerr_name:	XlibMessage
+	*intl._SGI_MMX_mwm_xerr_fmt1:	%s:  %s\n  
+	*intl._SGI_MMX_mwm_xerr_msg2:	MajorCode
+	*intl._SGI_MMX_mwm_xerr_defstr2:	Request Major code %d
+	*intl._SGI_MMX_mwm_xerr_name3:	XRequest
+	*intl._SGI_MMX_mwm_xerr_fmt3:	 (%s)\n  
+	*intl._SGI_MMX_mwm_xerr_msg4:	MinorCode
+	*intl._SGI_MMX_mwm_xerr_defstr4:	Request Minor code %d
+	*intl._SGI_MMX_mwm_xerr_fmt5_1:	%s.%d
+	*intl._SGI_MMX_mwm_xerr_name5:	XRequest
+	*intl._SGI_MMX_mwm_xerr_fmt5:	 (%s)
+	*intl._SGI_MMX_mwm_xerr_fmte:	\n  
+	*intl._SGI_MMX_mwm_xerr_fmt6_1:	%s.%d
+	*intl._SGI_MMX_mwm_xerr_fmt6_2:	Value
+	*intl._SGI_MMX_mwm_xerr_msg7:	Value
+	*intl._SGI_MMX_mwm_xerr_defstr7:	Value 0x%x
+	*intl._SGI_MMX_mwm_xerr_msg8:	AtomID
+	*intl._SGI_MMX_mwm_xerr_defstr8:	AtomID 0x%x
+	*intl._SGI_MMX_mwm_xerr_msg9:	ResourceID
+	*intl._SGI_MMX_mwm_xerr_defstr9:	ResourceID 0x%x
+	*intl._SGI_MMX_mwm_xerr_msg10:	ErrorSerial
+	*intl._SGI_MMX_mwm_xerr_defstr10:	Error Serial #%d
+	*intl._SGI_MMX_mwm_xerr_msg11:	CurrentSerial
+	*intl._SGI_MMX_mwm_xerr_defstr11:	Current Serial #%d
+	*intl._SGI_MMX_mwm_xerr_io:	4Dwm got an X I/O error\n
+	*intl._SGI_MMX_mwm_xerr_xt:	4Dwm got an Xt error\n\t%s\n
+	*intl._SGI_MMX_mwm_xerr_xtw:	4Dwm got an Xt warning\n\t%s\n
+	*intl._SGI_MMX_mwm_tb:	Toggle Behavior?
+	*intl._SGI_MMX_mwm_uc:	User_Customization
+	*intl._SGI_MMX_mwm_osf:	OSF_Motif_Defaults
+	*intl._SGI_MMX_mwm_iris:	IRIS_Defaults
+	*intl._SGI_MMX_mwm_tdb:	Toggle to Default Behavior?
+	*intl._SGI_MMX_mwm_tcb:	Toggle to Custom Behavior?
+	*intl._SGI_MMX_mwm_domwm:	Restart 4Dwm?
+	*intl._SGI_MMX_mwm_quitwm:	Quit 4Dwm?
+	*intl._SGI_MMX_mwm_ldfont_failed:	failed to load font: %.100s\0
+	*intl._SGI_MMX_mwm_noapp_font:	cannot find an appropriate font: %.100s\0
+	*intl._SGI_MMX_mwm_inconsis_variable:	ERROR: couldn't get a consistent set of visuals\n
+	*intl._SGI_MMX_mwm_no_keybind:	Key bindings %s not found, using builtin key bindings\n
+	*intl._SGI_MMX_mwm_no_btnbind:	Button bindings %s not found, using builtin button bindings\n
+	*intl._SGI_MMX_mwm_no_configfile:	Cannot open configuration file
+	*intl._SGI_MMX_mwm_nomem_menuacc:	Insufficient memory for menu accelerators
+	*intl._SGI_MMX_mwm_nomem_LANG:	Insufficient memory to get LANG environment variable.
+	*intl._SGI_MMX_mwm_nomem_menu1:	Insufficient memory for menu
+	*intl._SGI_MMX_mwm_parser1:	Expected '{' after menu name
+	*intl._SGI_MMX_mwm_nomem_menuitem:	Insufficient memory for menu item
+	*intl._SGI_MMX_mwm_bad_mnemonic:	Invalid mnemonic specification
+	*intl._SGI_MMX_mwm_nomem_accspec:	Insufficient memory for accelerator specification
+	*intl._SGI_MMX_mwm_bad_accspec:	Invalid accelerator specification
+	*intl._SGI_MMX_mwm_nomem:	Insufficient memory
+	*intl._SGI_MMX_mwm_no_grspec:	Missing group specification
+	*intl._SGI_MMX_mwm_bad_grspec:	Invalid group specification
+	*intl._SGI_MMX_mwm_bad_numspec:	Invalid number specification
+	*intl._SGI_MMX_mwm_parser2:	Expected '{' after button set name
+	*intl._SGI_MMX_mwm_nomem_btnspec:	Insufficient memory for button specification
+	*intl._SGI_MMX_mwm_bad_btnspec:	Invalid button specification
+	*intl._SGI_MMX_mwm_bad_btnctxt:	Invalid button context
+	*intl._SGI_MMX_mwm_parser3:	Expected '{' after key set name
+	*intl._SGI_MMX_mwm_nomwm_keyspec:	Insufficient memory for key specification
+	*intl._SGI_MMX_mwm_bad_keyspec:	Invalid key specification
+	*intl._SGI_MMX_mwm_bad_keyctxt:	Invalid key context
+	*intl._SGI_MMX_mwm_parser4:	%s: %s on line %d of configuration file \"%s\"\n
+	*intl._SGI_MMX_mwm_parser5:	%s: %s on line %d of specification string\n
+	*intl._SGI_MMX_mwm_visual1:	SG_visualType \"%s\" contains a non-alphabetic character \"%c\".
+	*intl._SGI_MMX_mwm_visual2:	Using \"%s\" instead.
+	*intl._SGI_MMX_mwm_nouplane:	underlay planes not supported from X11
+	*intl._SGI_MMX_mwm_noreq_visual:	Unable to get requested visualType (%s) with visualDepth (%d).
+	*intl._SGI_MMX_mwm_visual3:	Setting visual resources to server default values.
+	*intl._SGI_MMX_mwm_visual4:	Using visualType \"%s\" & visualDepth \"%d\" instead.
+	*intl._SGI_MMX_mwm_nogood_visual:	Couldn't get suitable visual
+	*intl._SGI_MMX_mwm_nogood_cmap:	Couldn't get a matching colormap
+	*intl._SGI_MMX_mwm_nogood_dble:	Couldn't get a matching drawable
+	*intl._SGI_MMX_mwm_visual5:	Setting visual resources to default values.
+	*intl._SGI_MMX_mwm_no_tp_client:	Couldn't create TrustedPath client.
+/* End of app-defaults file */

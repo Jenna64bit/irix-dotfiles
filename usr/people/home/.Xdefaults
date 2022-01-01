@@ -1,0 +1,338 @@
+! Xdefaults.  Generated from Xdefaults.in by configure.
+! ######################################################################
+! ######################################################################
+! ##  DO NOT EDIT Xdefaults!!!!
+! ##
+! ##  Only make changes to the file Xdefaults.in, and re-run ./configure
+! ##  to regenerate Xdefaults.
+! ##
+! ##  Thanks,
+! ##    the Management :)    (bgrayson)
+! ##
+! ######################################################################
+! ######################################################################
+!
+!  xosview resources (override into your .Xdefaults file)
+!
+! ######################################################################
+! A note on comments:
+! X only technically supports a comment by placing a '!' character
+! and the beginning of a line.  Anything else appears to be undefined
+! behavior.  Since xosview has used comments on any position on a line
+! for 20+ years (and I like it this way) it will continue to do so.
+!
+! So, you may place a '!' anywhere *AFTER* the ':' and the rest of the
+! line will be a comment.  Unless you wish to use a literal '!' character
+! in your value.  Then "escape" the '!' with a '&' character like so:
+! xosview*someName: True ! This is a comment
+! xosview*someName: False&!  ! This resource is set to "False!"
+! ######################################################################
+
+! **General Resources
+!xosview*title:
+!xosview*geometry:           +5+5
+!xosview*display:
+xosview*captions:           True
+xosview*labels:             True
+xosview*usedlabels:         True
+xosview*transparent:        False
+!xosview*pixmapName:         holes.xpm  ! tile and xpm as background
+xosview*meterLabelColor:    #EEEEFF
+xosview*usedLabelColor:     #EEEEEE
+!xosview*font:               7x13bold      ! X11 core font
+!xosview*font:               Oxygen Mono-8  ! Freetype2 font
+!xosview*font:               Oxygen Mono-9
+xosview*background:         #352E37
+xosview*foreground:         #FFFFFF
+xosview*enableStipple:	    False ! Change to true to try beta stipple support.
+xosview*samplesPerSec:      10    ! not yet supported
+xosview*graphNumCols:       128   ! number of samples shown in a graph
+
+
+! ** Load Meter Resources
+!    We do not need to enable the Decay option, as it is already time-averaged.
+xosview*load:               True
+xosview*loadCritColor:      #FC842B
+xosview*loadWarnColor:      #F2EF44
+xosview*loadProcColor:      #56E67B
+xosview*loadIdleColor:      #03315E
+xosview*loadPriority:       20
+xosview*loadWarnThreshold:  4     !  4 core system pretty common
+xosview*loadCritThreshold:  6
+xosview*loadDecay:          False
+xosview*loadGraph:          False
+xosview*loadUsedFormat:     float
+xosview*loadCpuSpeed:       True
+
+
+! ** CPU Meter Resources
+xosview*cpu:                True
+xosview*cpuUserColor:       #56E67B
+xosview*cpuNiceColor:       #F2EF44
+xosview*cpuSystemColor:     #0ABBDA
+xosview*cpuWaitColor:       #FC842B
+xosview*cpuInterruptColor:  #0DA707
+xosview*cpuSoftIntColor:    #AF0BEB
+xosview*cpuStolenColor:     #D31B4C
+xosview*cpuGuestColor:      #F90B53
+xosview*cpuNiceGuestColor:  #F9608E
+xosview*cpuFreeColor:       #03315E
+xosview*cpuPriority:        2
+xosview*cpuDecay:           True
+xosview*cpuGraph:           False
+xosview*cpuUsedFormat:	    percent
+xosview*cpuUsedDecay:       True
+xosview*cpuFormat:          auto   ! single, all, auto or both
+
+
+! ** Memory Meter Resources
+!    Not all of these are used by a specific platform.
+xosview*mem:                True
+xosview*memKernelColor:     #EEEEEE
+xosview*memUsedColor:       #56E67B
+xosview*memBufferColor:     #F2EF44
+xosview*memCacheColor:      #0ABBDA
+xosview*memSwapCacheColor:  #FC842B
+xosview*memFreeColor:       #03315E
+xosview*memTextColor:       #0DA707
+xosview*memOtherColor:      #AF0BEB
+xosview*memActiveColor:	    #D31B4C
+xosview*memInactiveColor:   #F90B53
+xosview*memPriority:        10
+xosview*memDecay:           False
+xosview*memGraph:           False
+xosview*memUsedFormat:	    autoscale
+
+
+! ** Disk Meter Resources
+xosview*disk:		    True
+xosview*diskIdleColor:	    #03315E
+xosview*diskUsedColor:	    #56E67B
+xosview*diskWriteColor:     #F2EF44
+xosview*diskReadColor:      #0ABBDA
+xosview*diskBandwidth:      30000000  ! 30MB/s reasonable for IDE and SCSI
+xosview*diskPriority:	    6
+xosview*diskDecay:	    True
+xosview*diskUsedFormat:     autoscale
+xosview*diskUsedDecay:      True
+xosview*diskGraph:	    False
+
+! Filesystem meter(s)
+xosview*filesys:            True
+xosview*filesysMounts:      auto
+!xosview*filesysMounts:      / /tmp /boot /home
+xosview*filesysFGColor:     #56E67B
+xosview*filesysBGColor:     #03315E
+xosview*filesysNoneColor:   #333333
+xosview*filesysPriority:    20
+xosview*filesysDecay:       False
+xosview*filesysGraph:       False
+xosview*filesysUsedFormat:  autoscale
+
+
+! ** Swap Meter Resources
+xosview*swap:               True
+xosview*swapUsedColor:      #56E67B
+xosview*swapFreeColor:      #03315E
+xosview*swapReservedColor:  #F2EF44
+xosview*swapPriority:       10
+xosview*swapDecay:          False
+xosview*swapGraph:          False
+xosview*swapUsedFormat:	    autoscale
+xosview*swapUsedDecay:      True
+
+! ** Page Meter Resources
+xosview*page:               True
+xosview*pageBandwidth:      120
+xosview*pageInColor:        #56E67B
+xosview*pageOutColor:       #F2EF44
+xosview*pageIdleColor:      #03315E
+xosview*pagePriority:       5
+xosview*pageDecay:          False
+xosview*pageGraph:          False
+xosview*pageUsedFormat:     autoscale
+xosview*pageUsedDecay:      True
+
+
+! Wifi Link meter
+xosview*wlink:                False
+xosview*wlinkBackground:      #03315E
+xosview*wlinkGoodColor:       #56E67B
+xosview*wlinkPoorColor:       #F2EF44
+xosview*wlinkPoorValue:       39       ! scale is 0-70 this value is a guess
+xosview*wlinkPriority:        8
+xosview*wlinkDecay:           False
+xosview*wlinkGraph:           False
+xosview*wlinkUsedFormat:      autoscale
+xosview*wlinkUsedDecay:       True
+
+
+! ** Network Meter Resources
+! The netBandwidth is now in bytes/sec because... I said so.
+xosview*net:                True
+!xosview*netBandwidth:      64000  ! for 64kbps ISDN
+!xosview*netBandwidth:      57600  ! for up to 57.6kbps modems
+!xosview*netBandwidth:      28800  ! for 28.8kbps modems (no comp) 14.4 (with)
+xosview*netBandwidth:      6750000 ! 54Mbps 802.11g (wifi)
+!xosview*netBandwidth:    10000000  ! for 10Mbit/s Ethernet
+!xosview*netBandwidth:  100000000  ! for 100Mbit/s Ethernet
+!xosview*netBandwidth: 1000000000  ! for 1Gbit/s Ethernet
+xosview*netInColor:         #56E67B
+xosview*netOutColor:        #F2EF44
+xosview*netBackground:      #03315E
+xosview*netPriority:        3
+xosview*netDecay:           True
+xosview*netGraph:           False
+xosview*netUsedFormat:	    autoscale
+xosview*netUsedDecay:       True
+xosview*netIface:           False  ! Linux does not use. If others do not nuke
+
+
+! ** Interrupt Rate Meter Resources
+xosview*irqrate:	    True
+xosview*irqrateUsedColor:   #56E67B
+xosview*irqrateIdleColor:   #03315E
+xosview*irqratePriority:    4
+xosview*irqratePeak:        100  # irq/sec
+xosview*irqrateUsedFormat:  autoscale
+xosview*irqrateUsedDecay:   True
+xosview*irqrateDecay:       True
+xosview*irqrateGraph:       False
+
+
+! Interrupt Meter Resources
+xosview*interrupts:         True
+xosview*intOnColor:         #56E67B
+xosview*intOffColor:        #03315E
+xosview*intPriority:	    4
+xosview*intFormat:          auto    ! single, all, auto or both
+
+! ** Battery Meter Resources
+xosview*battery:            False
+xosview*batteryLeftColor:   #56E67B
+xosview*batteryUsedColor:   #03315E
+xosview*batteryPriority:    100      ! every 10 seconds
+xosview*batteryUsedFormat:  percent
+xosview*batteryChargeColor: #F2EF44
+xosview*batteryFullColor:   #56E67B
+xosview*batteryLowColor:    #F2EF44
+xosview*batteryCritColor:   #FC842B
+xosview*batteryNoneColor:   #333333
+
+
+! ** Gfx Meter Resources ( Irix )
+xosview*gfx:               True
+xosview*gfxCritColor:      #FC842B
+xosview*gfxWarnColor:      #F2EF44
+xosview*gfxSwapColor:      #56E67B
+xosview*gfxIdleColor:      #03315E
+xosview*gfxPriority:       1    ! dont change, until you know what you do
+xosview*gfxCritThreshold:  120  ! swapbuffers/s per pipe
+xosview*gfxWarnThreshold:  60   ! swapbuffers/s per pipe
+xosview*gfxDecay:          False
+xosview*gfxGraph:          False
+xosview*gfxUsedFormat:	   autoscale
+
+
+! Linux-only resources:
+
+
+! ** Serial Meter Resources
+!
+! set 'True' for autodetection or give the baseaddress
+! (autodetection may fail sometimes, if the port is
+! locked by ppp/slip for example)
+!xosview*serial0:            0x3f8
+!xosview*serial1:            0x2f8
+!xosview*serial2:            0x3e8
+!xosview*serial3:            0x2e8
+xosview*serial0:            False
+xosview*serial1:            False
+xosview*serial2:            False
+xosview*serial3:            False
+xosview*serial4:            False
+xosview*serial5:            False
+xosview*serial6:            False
+xosview*serial7:            False
+xosview*serial8:            False
+xosview*serial9:            False
+xosview*serialOnColor:      #56E67B
+xosview*serialOffColor:     #03315E
+xosview*serialPriority:     1
+
+
+! ** RAID
+xosview*RAID:                 False
+xosview*RAIDdevicecount:      1
+xosview*RAIDdiskOnlineColor:  green
+xosview*RAIDdiskFailureColor: #FC842B
+xosview*RAIDresyncdoneColor:  #F2EF44
+xosview*RAIDresynctodoColor:  #56E67B
+xosview*RAIDresynccompleteColor:  #03315E
+xosview*RAIDPriority:         20
+xosview*RAIDUsedFormat:       percent
+xosview*horizontalMargin:      5  !
+xosview*verticalMargin:        5  ! FIXME: no meter in name
+xosview*verticalSpacing:       5  !
+
+! Thermal Zone
+xosview*tzone:                 True
+xosview*tzoneForeGround:       #56E67B
+xosview*tzoneBackground:       #03315E
+xosview*tzoneHotColor:         #F2EF44
+xosview*tzoneCritColor:        #FC842B
+xosview*tzoneHotTrip:          70
+xosview*tzoneCritTrip:          84
+xosview*tzonePeak:             100  ! peak of scale (total still in used)
+xosview*tzonePriority:         10
+xosview*tzoneDecay:            False
+xosview*tzoneGraph:            False
+xosview*tzoneUsedFormat:       autoscale
+xosview*tzoneUsedDecay:        False
+
+! ** Lms Temp
+xosview*lmstemp:	False
+xosview*lmstempActColor:       #56E67B
+xosview*lmstempHighColor:      #FC842B
+xosview*lmstempIdleColor:      #03315E
+! xosview*lmstempHighest:	100
+! default 100
+xosview*lmstemp1:	temp
+xosview*lmstemp2:	remote_temp
+! for more sensors just add entries here
+! note, there is currently no way to configure sensors with same
+! name in different subdirs
+! xosview*lmstempLabel1:	TMP
+! labels for avove sensors (default = TMP)
+xosview*lmstempLabel2:	RTMP
+xosview*lmstempPriority: 20
+xosview*lmstempUsedFormat: autoscale
+
+
+! ** NFSD meter resources
+xosview*NFSDStats:       False
+xosview*NFSDStatCallsColor:     #FC842B
+xosview*NFSDStatBadCallsColor:  #0ABBDA
+xosview*NFSDStatUDPColor:       #F2EF44
+xosview*NFSDStatTCPColor:       #56E67B
+xosview*NFSDStatIdleColor:      #03315E
+xosview*NFSDStatDecay:		True
+xosview*NFSDStatGraph:		False
+xosview*NFSDStatUsedFormat:	percent
+xosview*NFSDStatUsedDecay:      False
+
+! ** NFS meter resources
+xosview*NFSStats:       False
+xosview*NFSStatReTransColor:    #0ABBDA
+xosview*NFSStatAuthRefrshColor: #F2EF44
+xosview*NFSStatCallsColor:      #56E67B
+xosview*NFSStatIdleColor:       #03315E
+xosview*NFSStatDecay:		True
+xosview*NFSStatGraph:		False
+xosview*NFSStatUsedFormat:	percent
+
+! defaults for analog clock
+xclock*background: antiquewhite
+xclock*foreground: deeppink4
+xclock*hands: deeppink4
+xclock*highlight: indianred1

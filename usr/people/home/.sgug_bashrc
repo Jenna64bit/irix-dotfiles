@@ -1,0 +1,35 @@
+PATH=$PATH:/usr/people/jenna/bin
+source /usr/people/jenna/bin/dev_sgugshell.sh
+
+# Function to set shell prompt
+function set_prompt()
+{
+	# Also set the command prompt to only expand the last three directories
+	local pwdtail=${PWD/#$HOME/\~}
+	[[ $pwdtail =~ ^(/[^/]+|~)/.+/([^/]+/[^/]+)$ ]] && \
+	    pwdtail="${BASH_REMATCH[1]}/.../${BASH_REMATCH[2]}"
+	PS1="${PS1_HEAD}${pwdtail}${PS1_TAIL}"
+}
+
+# Set shell prompt
+PS1_HEAD=
+if [[ -n $SSH_CONNECTION ]]; then
+	PS1_HEAD+='\[\e[33m\]'
+	[[ $USER == "root" ]] && PS1_HEAD+="root@"
+	PS1_HEAD+='\h:'
+else
+	[[ $USER == "root" ]] && PS1_HEAD+='\[\e[33m\]root:'
+fi
+
+# don't eat ctrl-c yo
+if [ -t 0 ]
+then
+	stty sane
+	stty intr '^C' echoe 
+	stty susp '^Z' echoe
+	stty erase '^H' echoe
+fi
+
+PS1_HEAD+='\[\e[32m\]'
+PS1_TAIL='\[\e[0m\]$ '
+PROMPT_COMMAND=set_prompt

@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Set up default gamma settings
+xsetmon -nogui gammas
+
+# Launch enlightenment sound daemon
+/usr/sgug/bin/esd &
+
+# turn off client-side decorations when we can
+export GTK_CSD=0
+
+# map caps to ctrl
+cat /usr/people/jenna/.Xmodmap | /usr/bin/X11/xmodmap -
+
+# iconbar!
+# /usr/nekoware/bin/iconbar -magnify False

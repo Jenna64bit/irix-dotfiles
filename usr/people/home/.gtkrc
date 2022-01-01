@@ -1,0 +1,14 @@
+style "gtk-tooltips-style" {
+  bg[NORMAL] = "#ffffc0"
+  fg[NORMAL] = "#000000"
+}
+
+widget "gtk-tooltips" style "gtk-tooltips-style"
+
+style "gtk-progressbar-style" {
+  bg[NORMAL] = "#ffffff"
+  bg[PRELIGHT] = "#a0a0a0"
+}
+
+class "GtkProgressBar" style "gtk-progressbar-style"
+

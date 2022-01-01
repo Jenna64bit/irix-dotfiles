@@ -1,0 +1,53 @@
+Toolchest*hideTitle: TRUE
+
+Menu RSE
+{
+	"Dillo"		f.checkexec.sh.le "/usr/sgug/bin/sgugshell dillo"
+	"GVim"		f.checkexec.sh.le "/usr/sgug/bin/sgugshell gvim"
+	"Pidgin"	f.checkexec.sh.le "/usr/sgug/bin/sgugshell pidgin"
+	"Geany"		f.checkexec.sh.le "/usr/sgug/bin/sgugshell geany"
+	"XOSView"	f.checkexec.sh.le "/usr/sgug/bin/sgugshell xosview"
+	"Mrxvt"		f.checkexec.sh.le "/usr/sgug/bin/sgugshell mrxvt"
+	"Nedit"		f.checkexec.sh.le "/usr/sgug/bin/sgugshell nedit"
+	"Claws"		f.checkexec.sh.le "/usr/sgug/bin/sgugshell claws-mail"
+	"XMMS"		f.checkexec.sh.le "/usr/sgug/bin/sgugshell xmms"
+	"NetSurf"	f.checkexec.sh.le "/usr/sgug/bin/sgugshell netsurf-gtk2 --block_advertisements --incremental_reflow=false --enable_javascript=false file:///usr/people/jenna/bookmarks.html"
+	"NetSurf Motif"	f.checkexec.sh.le "/usr/sgug/bin/sgugshell netsurf-motif --block_advertisements --incremental_reflow=false --enable_javascript=false file:///usr/people/jenna/bookmarks.html"
+	"HexChat"	f.checkexec.sh.le "/usr/sgug/bin/sgugshell hexchat"
+	"Worker"	f.checkexec.sh.le "/usr/sgug/bin/sgugshell worker"
+	"Cinepaint"	f.checkexec.sh.le "/usr/sgug/bin/sgugshell cinepaint"
+}
+
+Menu Games
+{
+        "Robots"        f.checkexec.sh.le "/usr/sgug/bin/sgugshell gnome-robots"
+        "DevilutionX"   f.checkexec.sh.le "/usr/sgug/bin/sgugshell devilutionX"
+	"FreeCell"	f.checkexec.sh.le "/usr/people/jenna/Ace/freecell"
+        "Golf Solitaire"	f.checkexec.sh.le "/usr/people/jenna/Ace/golf"
+        "MineSweeper"	f.checkexec.sh.le "/usr/people/jenna/Ace/minesweeper"
+        "Cascadix"      f.checkexec.sh.le "/usr/sgug/bin/perl /usr/people/jenna/Downloads/cascadix015.gz"
+	"Battalion"	f.checkexec.sh.le "/usr/people/jenna/Battalion/battalion"
+	"Quake 2"	f.checkexec.sh.le "/usr/people/jenna/quake2/RUN"
+}
+
+Menu NekoNeko
+{
+	"IceBreaker"	f.checkexec.sh.le "/usr/nekoware/bin/icebreaker --theme=blocks"
+	"Hexen"		f.checkexec.sh.le "/usr/nekoware/bin/glhexen2"
+	"Crimson"	f.checkexec.sh.le "/usr/nekoware/bin/crimson"
+	"Nethack"	f.checkexec.sh.le "/usr/nekoware/bin/nethack"
+	"XAllWrite"	f.checkexec.sh.le "/usr/nekoware/bin/xallwrite"
+	"XQuad"		f.checkexec.sh.le "/usr/nekoware/bin/xquad"
+	"XClamation"	f.checkexec.sh.le "/usr/nekoware/bin/xclamation"
+	"Descent2"	f.checkexec.sh.le "/usr/nekoware/bin/d2x-gl"
+}
+
+Menu ToolChest
+{
+	no-label	f.separator
+	"RSE"		f.menu RSE
+        no-label	f.separator
+        "Games"		f.menu Games
+        no-label	f.separator
+	"Neko Neko"	f.menu NekoNeko
+}
