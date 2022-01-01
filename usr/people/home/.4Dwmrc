@@ -160,7 +160,7 @@ Keys 4DwmKeyBindings
 	# Alt Shift <Key>4 root|icon|window f.switch_desk "Desk 4"
 
 	# Run DMenu
- 	Ctrl<Key>space		root|icon|window	f.exec "/usr/sgug/bin/sgugshell dmenu_run -i -p Yes? -l 5 -nb gray -nf black -sb blue -sf white"
+ 	Ctrl<Key>space		root|icon|window	f.exec "/usr/sgug/bin/sgugshell /usr/sgug/bin/dmenu_run"
 }
 
 
