@@ -51,3 +51,9 @@ Menu ToolChest
         no-label	f.separator
 	"Neko Neko"	f.menu NekoNeko
 }
+
+Menu Utilities
+{
+	no-label		f.separator
+	"Command Launch"	f.checkexec.sh.le "/usr/sbin/slaunch"
+}
