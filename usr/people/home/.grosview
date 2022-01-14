@@ -1,0 +1,6 @@
+opt font(Screen)
+cpu strip
+netif(ef0) strip tracksum(30)
+rmem
+wait
+sysact
