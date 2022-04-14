@@ -1,5 +1,5 @@
 Mrxvt.backspaceKey:             ^H
-Mrxvt.command:			/usr/people/jenna/bin/local_sgug_shell.sh
+Mrxvt.command:			/usr/sgug/bin/sgugshell
 Mrxvt.cmdAllTabs:		True
 
 
