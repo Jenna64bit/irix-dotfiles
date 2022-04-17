@@ -336,3 +336,12 @@ xclock*background: antiquewhite
 xclock*foreground: deeppink4
 xclock*hands: deeppink4
 xclock*highlight: indianred1
+
+! SGIRC IRC client
+sgirc*chatFont: -sgi-haebfix-medium-r-normal-*-15-*-*-*-*-*-*-*
+sgirc*chatBGColor: floralwhite
+sgirc*chatTextColor: midnightblue
+sgirc*chatTimeColor: slategray
+sgirc*chatNickColor: lightseagreen
+sgirc*chatBridgeColor: indigo
+sgirc*chatSelectionColor: hotpink
