@@ -9,3 +9,7 @@ Some useful tidbits:
 * Preterhuman! I adapted the synergy setup here for my Barrier port https://wiki.preterhuman.net/Use_Custom_Background_on_Irix
 * More neat tips, including changing window framing http://www.fsck.it/html/geek/tips/look.html
 * Rad IRIX backdrops https://forums.sgi.sh/index.php?threads/create-your-own-irix-desktop-backgrounds-and-post-them-here-for-others-to-download.503/
+
+Some complaints?
+* The built-in Irix file manager defaults to "move" with files, hold ctrl to copy
+* The Icon bar has a large minimum size
