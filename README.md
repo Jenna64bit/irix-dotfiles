@@ -13,3 +13,23 @@ Some useful tidbits:
 Some complaints?
 * The built-in Irix file manager defaults to "move" with files, hold ctrl to copy
 * The Icon bar has a large minimum size
+
+Custom "minimize/window" icons in 4Dwm:
+
+- They go in /usr/lib/images, ~/.icons or another path set by ENV
+- Any image file format so far seems fine, at least PNG and SGI RGB both work
+- The size is weird, around 90x70 but usually smaller, and it varies. EG 85x68 for Mouse.icon
+- They only get loaded once, then saved in memory, so playing with a bunch will require a login-cycle
+
+Basic process is to use xprop on an open window, grab WM_CLASS, take an image, pop it in ~/.icons/ and name it $WM_CLASS.icon
+
+Now to just figure out the color depth requirement, probably 8 bit, and some stuff that looks good at that size and without transparency.
+
+WindowMaker icons might work well, they're boxy lower color and not-transparent.
+
+EG: http://www.aiei.ch/gnustep/icons/icons.html
+
+Check out the "Icons" section for the 4Dwm manpage
+https://nixdoc.net/man-pages/IRIX/man1/Xm/4Dwm.1.html
+
+Some apps in SGUG-RSE properly set their own icons, I'm not 100% on how that fully works yet. 
