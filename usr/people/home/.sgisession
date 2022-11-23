@@ -1,7 +1,10 @@
 #!/bin/sh
 
 # Set up default gamma settings
-xsetmon -nogui gammas
+#xsetmon -nogui gammas
+
+# set up Xdefaults
+xrdb -merge -nocpp /usr/people/home/.Xdefaults
 
 # Launch enlightenment sound daemon
 /usr/sgug/bin/esd &
@@ -10,7 +13,7 @@ xsetmon -nogui gammas
 export GTK_CSD=0
 
 # map caps to ctrl
-cat /usr/people/jenna/.Xmodmap | /usr/bin/X11/xmodmap -
+cat /usr/people/home/.Xmodmap | /usr/bin/X11/xmodmap -
 
 # iconbar!
 # /usr/nekoware/bin/iconbar -magnify False
